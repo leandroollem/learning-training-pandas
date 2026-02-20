@@ -24,7 +24,12 @@ df.drop_duplicates(subset=["nome", "sobrenome"])
 # %%
 df.drop_duplicates(keep="last", subset=["nome", "sobrenome"])
 # %%
-df = (df.sort_values("salario", ascending=False)
-      .drop_duplicates(keep="last", subset=["nome", "sobrenome"]))
+df = (df.sort_values("salario", ascending=False))
 df
 # %%
+df = (df.drop_duplicates(keep="first", subset=["nome", "sobrenome"]))
+df
+# %%
+df = (df.sort_values("salario", ascending=False)
+        .drop_duplicates(keep="first", subset=["nome", "sobrenome"]))
+df
