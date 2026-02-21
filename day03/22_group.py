@@ -27,7 +27,7 @@ summary = (transacoes.groupby(by=["IdCliente"], as_index=False)
                             "IdTransacao":["count"],
                             "QtdePontos":["sum", "mean"]
                         }))
-
+summary
 # %%
 summary[("QtdePontos", "mean")]
 # %%
